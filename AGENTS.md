@@ -6,17 +6,25 @@ This repository is for the agency's own marketing website. It will present the
 service, showcase honest portfolio work, explain the process and care plans,
 and convert visitors into qualified enquiries.
 
-The project now contains a standard Next.js foundation for Vercel. The current
-page is an intentionally neutral holding page, not the finished agency site.
-Branding, production copy, portfolio projects, contact details, analytics, and
-a production domain have not been selected. Do not invent testimonials,
-clients, results, prices, certifications, or contact information.
+The selected working agency name is **MamanDigital**. The project contains a
+standard Next.js foundation for Vercel, and the current page is an intentionally
+neutral holding page rather than the finished agency site. Production copy,
+portfolio projects, contact details, analytics, final brand assets, and a
+production domain have not been selected. Do not invent testimonials, clients,
+results, certifications, or contact information.
 
 ## Confirmed project state
 
 - GitHub organization: `mamanholdings`.
 - Repository: `mamanholdings/agency-site`.
 - Default branch: `main`.
+- Working agency name: `MamanDigital`.
+- Primary language: Hebrew with a deliberate RTL layout.
+- Initial target market: Israeli local service professionals, especially
+  technicians, electricians, plumbers, and similar tradespeople.
+- Commercial direction: three website packages. The middle package is planned
+  at NIS 2,500 setup plus NIS 200 per month for hosting and maintenance; its
+  exact scope and contract terms still require confirmation.
 - Repository visibility: public. This was selected because Vercel Hobby does
   not support native Git integration for private organization repositories.
 - Vercel team: `maman-holdings-llc`.
@@ -166,9 +174,8 @@ MFA, and recovery details outside the public repository.
 
 ## Before building the first version
 
-Confirm the business name, target market, language/RTL requirements, primary
-call to action, contact details, package/pricing approach, and whether the first
-portfolio entries are concept projects.
+Confirm the primary call to action, contact details, complete package scopes,
+contract terms, and whether the first portfolio entries are concept projects.
 
 Also confirm the production domain, brand assets, preferred visual direction,
 legal/privacy requirements, form destination, analytics choice, and ongoing
