@@ -40,7 +40,7 @@ const packages = [
     features: [
       "עד 8 עמודים",
       "עמודי שירות או אזורי פעילות",
-      "חיבור ליומן או CRM בסיסי",
+      "חיבור ליומן או למערכת ניהול לקוחות",
       "דוח מדידה חודשי",
       "עדיפות בטיפול השוטף",
       "3 סבבי תיקונים",
@@ -86,7 +86,7 @@ const faqs = [
   {
     question: "מה כולל התשלום החודשי?",
     answer:
-      "אחסון ב-Vercel, תעודת SSL והצפנת HTTPS, ניטור זמינות וטפסים, עדכוני אבטחה ותלויות, תמיכה והיקף מוגדר של שינויי תוכן קטנים. הפירוט המדויק יופיע בהצעה ובהסכם.",
+      "אחסון האתר, תעודת SSL, בדיקות מהירות וזמינות, טיפול בתקלות, שדרוגי מערכת, עדכוני אבטחה, תמיכה והיקף מוגדר של שינויי תוכן קטנים. הפירוט המדויק יופיע בהצעה ובהסכם.",
   },
   {
     question: "האם האתר יופיע ראשון בגוגל?",
@@ -157,7 +157,7 @@ export default function Home() {
                 </a>
               </div>
               <ul className="hero-notes" aria-label="יתרונות מרכזיים">
-                <li><Icon name="check" /> מותאם לעסק</li>
+                <li><Icon name="check" /> מתאים למגוון עסקים</li>
                 <li><Icon name="check" /> מותאם למובייל</li>
                 <li><Icon name="check" /> מהיר ומאובטח</li>
               </ul>
@@ -198,7 +198,6 @@ export default function Home() {
             <span>דפי נחיתה</span><i />
             <span>אתרי תדמית</span><i />
             <span>חנויות אונליין</span><i />
-            <span>מכירות</span><i />
             <span>נוכחות דיגיטלית</span>
           </div>
         </section>
@@ -243,7 +242,6 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading split-heading">
               <div>
-                <p className="kicker">הפתרון הנכון למטרה</p>
                 <h2 id="solutions-title">לא כל עסק צריך את אותו סוג אתר.</h2>
               </div>
               <p>
@@ -268,9 +266,7 @@ export default function Home() {
         <section className="section packages-section" id="packages" aria-labelledby="packages-title">
           <div className="shell">
             <div className="section-heading centered-heading">
-              <p className="kicker">פתרון שמתאים לעסק</p>
               <h2 id="packages-title">בוחרים אתר לפי המטרות והיקף העבודה.</h2>
-              <p>החבילות הן נקודת התחלה; ההצעה הסופית מותאמת לצרכים של העסק.</p>
             </div>
 
             <div className="package-grid">
@@ -299,7 +295,7 @@ export default function Home() {
             </div>
             <p className="pricing-note">
               המחירים המוצגים הם נקודת פתיחה לתמחור ואינם כוללים דומיין, צילום, מיתוג, כתיבה מקצועית,
-              מערכות מסחר או אינטגרציות בתשלום. חנות אונליין מתוכננת ומתומחרת בנפרד
+              מערכות מסחר או חיבורים לשירותים חיצוניים בתשלום. חנות אונליין מתוכננת ומתומחרת בנפרד
               לפי הקטלוג, הסליקה, המשלוחים והתפעול. המחיר הסופי, היקף העבודה ומע״מ יוגדרו בהצעה מסודרת.
             </p>
           </div>
@@ -308,7 +304,6 @@ export default function Home() {
         <section className="section process-section" id="process" aria-labelledby="process-title">
           <div className="shell process-layout">
             <div className="process-intro">
-              <p className="kicker">תהליך שמתחיל בעסק</p>
               <h2 id="process-title">לומדים את העסק ובונים עבורו אתר המותאם למטרותיו.</h2>
               <p>
                 התהליך נועד להבין מה הלקוחות שלכם צריכים לראות ומה האתר צריך
@@ -336,10 +331,10 @@ export default function Home() {
               </p>
             </div>
             <div className="care-features">
-              <div><Icon name="gauge" /><span><b>ניטור</b><small>בדיקות זמינות ותקינות טפסים</small></span></div>
-              <div><Icon name="lock" /><span><b>אבטחה</b><small>תעודת SSL, הצפנת HTTPS ועדכוני אבטחה</small></span></div>
-              <div><Icon name="tools" /><span><b>תחזוקה</b><small>עדכוני תוכן ותמיכה שוטפת</small></span></div>
-              <div><Icon name="code" /><span><b>גיבוי ושחזור</b><small>גרסאות קוד שמורות ואפשרות חזרה לגרסה יציבה</small></span></div>
+              <div><Icon name="gauge" /><span><b>ביצועים וזמינות</b><small>בדיקות מהירות, מעקב אחר זמינות וטיפול בתקלות</small></span></div>
+              <div><Icon name="lock" /><span><b>אבטחה</b><small>תעודת SSL, הצפנה ועדכוני אבטחה שוטפים</small></span></div>
+              <div><Icon name="tools" /><span><b>תחזוקה ועדכונים</b><small>שדרוגי מערכת, עדכוני תוכן ותמיכה שוטפת</small></span></div>
+              <div><Icon name="code" /><span><b>גיבוי ושחזור</b><small>הקוד מגובה ונשמר באופן מאובטח, עם אפשרות לשחזר גרסה יציבה</small></span></div>
             </div>
           </div>
         </section>
