@@ -198,7 +198,6 @@ export default function Home() {
             <span>דפי נחיתה</span><i />
             <span>אתרי תדמית</span><i />
             <span>חנויות אונליין</span><i />
-            <span>לידים</span><i />
             <span>מכירות</span><i />
             <span>נוכחות דיגיטלית</span>
           </div>
@@ -227,8 +226,8 @@ export default function Home() {
               <article>
                 <span className="number">02</span>
                 <Icon name="phone" />
-                <h3>הופכים עניין לפנייה</h3>
-                <p>מסלול פשוט ל-WhatsApp, לטלפון, לטופס או לרכישה — בהתאם למטרה.</p>
+                <h3>מקלים על הלקוחות ליצור קשר</h3>
+                <p>כפתורים ברורים ל-WhatsApp, לטלפון, לטופס או לרכישה — בהתאם לצורכי העסק.</p>
               </article>
               <article>
                 <span className="number">03</span>
