@@ -3,13 +3,13 @@
 ## Purpose and current status
 
 This repository is for the agency's own marketing website. It will present the
-service, showcase honest portfolio work, explain the process and care plans,
+service, explain the available website types, packages, process and care plans,
 and convert visitors into qualified enquiries.
 
 The selected working agency name is **MamanDigital**. The project contains a
-complete first-pass Hebrew RTL marketing site on a feature branch. It includes
-the service positioning, packages, process, clearly labelled concept portfolio
-work, maintenance/security information, FAQ, and a contact section. Real
+complete first-pass Hebrew RTL marketing site. It includes broad business
+positioning, website types, packages, process, maintenance/security information,
+FAQ, and a contact section. Real
 contact details, analytics, final brand assets, legal text, and a production
 domain have not been selected. Do not invent testimonials, clients, results,
 certifications, or unlabelled contact information.
@@ -21,16 +21,19 @@ certifications, or unlabelled contact information.
 - Default branch: `main`.
 - Working agency name: `MamanDigital`.
 - Primary language: Hebrew with a deliberate RTL layout.
-- Initial target market: Israeli local service professionals, especially
-  technicians, electricians, plumbers, and similar tradespeople.
+- Target market: business owners across Israel. Messaging must remain broad
+  enough for visitors from different industries to identify with it.
 - Service area: all of Israel.
 - Primary call to action: `קבלו הצעת מחיר ב-WhatsApp`.
 - Commercial direction: three website packages. The middle package is planned
   at NIS 2,500 setup plus NIS 200 per month for hosting and maintenance; its
   exact scope and contract terms still require confirmation.
+- Website types are explicitly distinguished: landing pages for a focused
+  offer, marketing/business sites for credibility and leads, and e-commerce
+  sites for online sales. E-commerce is scoped and priced separately.
 - Current design direction: Hebrew-first industrial editorial design using
-  graphite, warm off-white, safety orange, lime accents, technical grids, and
-  custom CSS concept-project artwork. Keep motion restrained.
+  graphite, warm off-white, safety orange, lime accents, and technical grids.
+  Keep motion restrained.
 - Repository visibility: public. This was selected because Vercel Hobby does
   not support native Git integration for private organization repositories.
 - Vercel team: `maman-holdings-llc`.
@@ -38,9 +41,9 @@ certifications, or unlabelled contact information.
 - Production alias: `https://agency-site-eta-sooty.vercel.app`.
 - GitHub and Vercel are connected. Future branches and pull requests should
   receive Preview deployments; merges to `main` should deploy to Production.
-- Vercel Authentication currently protects the `*.vercel.app` deployment URLs.
-  The owner can view them while signed in. Do not disable this protection
-  without explicit approval because doing so also exposes Preview URLs.
+- The Production deployment is publicly reachable. Preview deployments may be
+  protected and should remain protected unless public review is explicitly
+  required.
 - No custom production domain is configured yet.
 
 The first Production build is ready and verified through authenticated Vercel
@@ -112,7 +115,8 @@ deployment was used only to bootstrap and verify the first linked project.
 
 - Build a focused conversion site before adding extra pages or features.
 - Lead with business outcomes; AI is an internal production advantage.
-- Label speculative portfolio pieces as concept projects.
+- Do not show portfolio or concept projects until the examples themselves have
+  been built and approved. Never imply that concept work is client work.
 - Use real, licensed assets and concrete copy; avoid generic filler.
 - Meet WCAG 2.2 AA conventions where practical, including keyboard navigation,
   visible focus, sufficient contrast, labels, headings, and reduced motion.
@@ -157,11 +161,10 @@ Domains should normally be owned by the client or agency business account with
 MFA, renewal protection, documented DNS, and recovery access. Do not reuse one
 customer's credentials or environment values for another customer.
 
-For this agency site, keep Vercel Authentication enabled while only the
-`*.vercel.app` address is used. When a real custom domain is selected, attach it
-to the Production deployment, confirm that it is publicly reachable, and keep
-Preview deployments protected. Record the registrar, DNS ownership, renewal,
-MFA, and recovery details outside the public repository.
+For this agency site, keep Preview deployments protected where practical. When
+a real custom domain is selected, attach it to the Production deployment and
+confirm that it is publicly reachable. Record the registrar, DNS ownership,
+renewal, MFA, and recovery details outside the public repository.
 
 ## Decisions made
 
@@ -173,16 +176,15 @@ MFA, and recovery details outside the public repository.
 - Use one repository and one Vercel project per customer site.
 - Keep this repository public to retain Vercel Hobby Git integration; never
   rely on repository privacy to protect secrets.
-- Keep Vercel deployment authentication enabled for now and use signed-in or
-  temporary authenticated access to review deployments.
+- Keep Production public and protect Preview deployments where practical.
 - Treat inventory, authentication, payments, and similar systems as separate
   application work requiring stronger architecture and security review.
 
 ## Before building the first version
 
 Confirm real contact details, complete contract terms, and final approval of
-the package scopes. The current portfolio entries are explicitly labelled
-concept projects and must remain labelled until replaced by real work.
+the package scopes. The portfolio section is intentionally absent until real or
+approved concept sites are ready to present honestly.
 
 Also confirm the production domain, brand assets, preferred visual direction,
 legal/privacy requirements, form destination, analytics choice, and ongoing
