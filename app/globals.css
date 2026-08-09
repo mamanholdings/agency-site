@@ -1226,8 +1226,8 @@ footer {
     padding: 14px 12px;
     text-align: center;
   }
-  .section { padding-block: 82px; }
-  .section-heading { margin-bottom: 40px; }
+  .section { padding-block: 64px; }
+  .section-heading { margin-bottom: 34px; }
   .section-heading h2,
   .process-intro h2,
   .care-copy h2,
@@ -1243,11 +1243,15 @@ footer {
   .package-card ul { margin-bottom: 30px; }
   .solution-card { min-height: 300px; padding: 28px 24px; }
   .solution-purpose { margin-top: 42px; }
+  .process-layout,
+  .faq-layout { gap: 36px; }
+  .process-section { padding-bottom: 52px; }
+  .care-section { padding-top: 0; }
   .process-list li { grid-template-columns: 48px 1fr; gap: 14px; }
   .care-card { width: calc(100% - 16px); padding: 34px 22px; border-radius: 24px; }
   .care-features { grid-template-columns: 1fr; }
   .care-features > div { min-height: 110px; }
-  .contact-section { padding-block: 80px; }
+  .contact-section { padding-block: 64px; }
   .contact-card { padding: 24px; box-shadow: 8px 8px 0 rgba(17, 20, 16, 0.2); }
   .contact-links span { font-size: 0.72rem; }
   .footer-bottom { flex-direction: column; text-align: center; }
