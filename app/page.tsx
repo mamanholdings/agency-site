@@ -2,11 +2,11 @@ import { Icon } from "./_components/icon";
 
 const packages = [
   {
-    name: "נוכחות",
-    eyebrow: "להתחיל נכון",
+    name: "דף נחיתה",
+    eyebrow: "להצעה ממוקדת",
     setup: "1,500",
     monthly: "150",
-    description: "עמוד ממוקד שמציג את העסק ומוביל לקוחות לשיחה.",
+    description: "עמוד ממוקד לשירות, קמפיין או הצעה אחת, עם מסלול ברור לפנייה.",
     features: [
       "עמוד אחד, עד 5 מקטעים",
       "עיצוב מלא למובייל",
@@ -16,11 +16,11 @@ const packages = [
     ],
   },
   {
-    name: "מקצועי",
-    eyebrow: "הבחירה המרכזית",
+    name: "אתר תדמית",
+    eyebrow: "הבחירה לעסקים",
     setup: "2,500",
     monthly: "200",
-    description: "אתר שלם לעסק שרוצה להיראות רציני ולקבל פניות מסודרות.",
+    description: "אתר מלא שמציג את העסק, השירותים והיתרונות ובונה אמון מול לקוחות.",
     featured: true,
     features: [
       "עד 5 עמודים",
@@ -32,11 +32,11 @@ const packages = [
     ],
   },
   {
-    name: "צמיחה",
-    eyebrow: "לעסק בתנועה",
+    name: "אתר תדמית מורחב",
+    eyebrow: "לעסק עם יותר תוכן",
     setup: "4,500",
     monthly: "350",
-    description: "תשתית רחבה יותר לשירותים, אזורים ותהליכי פנייה מתקדמים.",
+    description: "פתרון רחב לעסק עם כמה שירותים, קהלים או תהליכי פנייה.",
     features: [
       "עד 8 עמודים",
       "עמודי שירות או אזורי פעילות",
@@ -48,31 +48,36 @@ const packages = [
   },
 ];
 
-const projects = [
+const siteTypes = [
   {
-    trade: "חשמלאי",
-    name: "זרם בטוח",
-    line: "זמינות ברורה, שירותים מסודרים ודרך קצרה לפנייה.",
-    className: "project-electric",
-    icon: "bolt" as const,
+    number: "01",
+    name: "דף נחיתה",
+    purpose: "לקמפיין או לשירות ממוקד",
+    description:
+      "עמוד אחד שמציג הצעה ברורה ומוביל את המבקר לפעולה אחת — השארת פרטים, שיחה או רכישה.",
   },
   {
-    trade: "אינסטלטור",
-    name: "קו נקי",
-    line: "אתר שירות מקומי עם היררכיה פשוטה ואמון מהרגע הראשון.",
-    className: "project-water",
-    icon: "tools" as const,
+    number: "02",
+    name: "אתר תדמית",
+    purpose: "לנוכחות מקצועית וליצירת לידים",
+    description:
+      "אתר שמציג את העסק, השירותים והיתרונות, מחזק אמון ונותן ללקוחות סיבה טובה ליצור קשר.",
   },
   {
-    trade: "טכנאי מיזוג",
-    name: "מזג מדויק",
-    line: "נוכחות דיגיטלית נקייה שמוכנה לעונת השיא.",
-    className: "project-air",
-    icon: "spark" as const,
+    number: "03",
+    name: "חנות אונליין",
+    purpose: "למכירת מוצרים באינטרנט",
+    description:
+      "מערכת מסחר עם קטלוג, סליקה, משלוחים וניהול הזמנות. ההיקף נקבע בנפרד לפי הפעילות של העסק.",
   },
 ];
 
 const faqs = [
+  {
+    question: "איזה סוג אתר מתאים לעסק שלי?",
+    answer:
+      "דף נחיתה מתאים להצעה או לקמפיין ממוקד, אתר תדמית מתאים לעסק שרוצה נוכחות מקצועית ולידים, וחנות אונליין מיועדת למכירת מוצרים. בפגישת האפיון נבחן את המטרה ונמליץ על הפתרון המתאים — בלי להעמיס מערכת שהעסק לא צריך.",
+  },
   {
     question: "כמה זמן לוקח לבנות אתר?",
     answer:
@@ -91,7 +96,7 @@ const faqs = [
   {
     question: "אפשר להוסיף בעתיד מערכת הזמנות או מלאי?",
     answer:
-      "כן. מתחילים באתר תדמית פשוט ומהיר, וכשיש צורך עסקי אמיתי אפשר לתכנן מערכת נפרדת עם הרשאות, מסד נתונים, גיבויים ובקרות אבטחה מתאימות.",
+      "כן. כאשר יש צורך עסקי אמיתי, אפשר לתכנן מערכת ייעודית עם הרשאות, מסד נתונים, גיבויים ובקרות אבטחה מתאימות. מערכת כזו מתומחרת ומתוכננת בנפרד מאתר תדמית.",
   },
   {
     question: "למי שייכים האתר והדומיין?",
@@ -113,9 +118,9 @@ export default function Home() {
             <span>Maman</span>Digital
           </a>
           <nav aria-label="ניווט ראשי">
-            <a href="#why">למה אנחנו</a>
+            <a href="#why">למה צריך אתר</a>
+            <a href="#solutions">סוגי אתרים</a>
             <a href="#packages">חבילות</a>
-            <a href="#work">עבודות</a>
             <a href="#process">תהליך</a>
           </nav>
           <a className="button button-small" href="#contact">
@@ -131,17 +136,16 @@ export default function Home() {
           <div className="shell hero-layout">
             <div className="hero-copy">
               <p className="kicker">
-                <span /> אתרים לבעלי מקצוע בכל הארץ
+                <span /> אתרים שמקדמים עסקים
               </p>
               <h1 id="hero-title">
-                אתר שעובד קשה
+                העסק שלכם ראוי לאתר
                 <br />
-                <em>כמו העסק שלך.</em>
+                <em>שמביא תוצאות.</em>
               </h1>
               <p className="hero-summary">
-                MamanDigital בונה אתרי תדמית חדים, מהירים ומותאמים לנייד
-                לטכנאים, חשמלאים, אינסטלטורים ובעלי מקצוע שרוצים להפוך
-                חיפושים לפניות.
+                אנחנו מתמחים בבניית אתרים מותאמים לעסקים שרוצים להיראות
+                מקצועיים, להגיע ללקוחות הנכונים ולהפוך עניין ללידים ולמכירות.
               </p>
               <div className="hero-actions">
                 <a className="button" href="#contact">
@@ -153,13 +157,13 @@ export default function Home() {
                 </a>
               </div>
               <ul className="hero-notes" aria-label="יתרונות מרכזיים">
-                <li><Icon name="check" /> עברית ו-RTL</li>
+                <li><Icon name="check" /> מותאם לעסק</li>
                 <li><Icon name="check" /> מותאם למובייל</li>
                 <li><Icon name="check" /> מהיר ומאובטח</li>
               </ul>
             </div>
 
-            <div className="hero-visual" aria-label="המחשה של אתר לבעל מקצוע">
+            <div className="hero-visual" aria-label="המחשה של אתר עסקי במובייל">
               <div className="signal-card signal-top">
                 <span className="signal-icon"><Icon name="gauge" /></span>
                 <span><b>אתר מהיר</b><small>בנוי לביצועים</small></span>
@@ -167,18 +171,18 @@ export default function Home() {
               <div className="phone-frame">
                 <div className="phone-bar"><span /><span /><span /></div>
                 <div className="phone-content">
-                  <div className="mini-brand"><Icon name="bolt" /> החשמלאי שלי</div>
-                  <p>שירות מהיר.<br />עבודה בטוחה.</p>
-                  <span className="mini-button">התקשרו עכשיו</span>
+                  <div className="mini-brand"><Icon name="spark" /> העסק שלכם</div>
+                  <p>נוכחות מקצועית.<br />תוצאות עסקיות.</p>
+                  <span className="mini-button">בואו נדבר</span>
                   <div className="mini-lines"><span /><span /><span /></div>
                   <div className="mini-services">
-                    <span>תיקונים</span><span>התקנות</span><span>חירום</span>
+                    <span>שירותים</span><span>אודות</span><span>יצירת קשר</span>
                   </div>
                 </div>
               </div>
               <div className="lead-card">
                 <span className="lead-dot" />
-                <span><small>פנייה חדשה</small><b>לקוח מאזור המרכז</b></span>
+                <span><small>פנייה חדשה</small><b>לקוח מתעניין בשירות</b></span>
                 <span className="lead-time">עכשיו</span>
               </div>
               <div className="signal-card signal-bottom">
@@ -189,14 +193,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="ticker" aria-label="תחומי שירות">
+        <section className="ticker" aria-label="סוגי אתרים ומטרות עסקיות">
           <div>
-            <span>חשמלאים</span><i />
-            <span>אינסטלטורים</span><i />
-            <span>טכנאים</span><i />
-            <span>מתקינים</span><i />
-            <span>בעלי מקצוע</span><i />
-            <span>עסקים מקומיים</span>
+            <span>דפי נחיתה</span><i />
+            <span>אתרי תדמית</span><i />
+            <span>חנויות אונליין</span><i />
+            <span>לידים</span><i />
+            <span>מכירות</span><i />
+            <span>נוכחות דיגיטלית</span>
           </div>
         </section>
 
@@ -204,12 +208,12 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading split-heading">
               <div>
-                <p className="kicker kicker-light">לא עוד כרטיס ביקור דיגיטלי</p>
-                <h2 id="why-title">אתר עם עבודה לעשות.</h2>
+                <p className="kicker kicker-light">נוכחות דיגיטלית היא חלק מהעסק</p>
+                <h2 id="why-title">האתר משפיע על ההחלטה לפנות אליכם.</h2>
               </div>
               <p>
-                הלקוח כבר מחפש פתרון. האתר צריך להסביר מהר מי אתם, לבנות
-                אמון ולהפוך את הצעד הבא לפשוט.
+                לקוחות בודקים את העסק באינטרנט לפני שהם מתקשרים או קונים.
+                כשאין אתר מקצועי, קשה יותר לבנות אמון — והזדמנויות עוברות למתחרים.
               </p>
             </div>
 
@@ -217,21 +221,47 @@ export default function Home() {
               <article>
                 <span className="number">01</span>
                 <Icon name="spark" />
-                <h3>נראים מקצועיים</h3>
-                <p>שפה חזותית ברורה, תוכן מדויק וחוויה שמתאימה לעסק אמיתי.</p>
+                <h3>יוצרים רושם מקצועי</h3>
+                <p>עיצוב ותוכן שמציגים את העסק בצורה אמינה, ברורה ומדויקת.</p>
               </article>
               <article>
                 <span className="number">02</span>
                 <Icon name="phone" />
-                <h3>מובילים לפעולה</h3>
-                <p>מסלול קצר לטלפון, WhatsApp או טופס — בלי להעמיס על הלקוח.</p>
+                <h3>הופכים עניין לפנייה</h3>
+                <p>מסלול פשוט ל-WhatsApp, לטלפון, לטופס או לרכישה — בהתאם למטרה.</p>
               </article>
               <article>
                 <span className="number">03</span>
                 <Icon name="code" />
-                <h3>בנויים לטווח ארוך</h3>
-                <p>קוד נקי, מעט תלות במערכות מיותרות ותשתית שאפשר להרחיב.</p>
+                <h3>בונים בסיס לצמיחה</h3>
+                <p>אתר מהיר ומאובטח שאפשר למדוד, לשפר ולהרחיב כשהעסק מתקדם.</p>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="section solutions-section" id="solutions" aria-labelledby="solutions-title">
+          <div className="shell">
+            <div className="section-heading split-heading">
+              <div>
+                <p className="kicker">הפתרון הנכון למטרה</p>
+                <h2 id="solutions-title">לא כל עסק צריך את אותו סוג אתר.</h2>
+              </div>
+              <p>
+                אנחנו מתאימים את האתר למודל העסקי, לקהל ולתוצאה שהוא צריך לקדם —
+                לידים, מכירות או נוכחות מקצועית.
+              </p>
+            </div>
+
+            <div className="solution-grid">
+              {siteTypes.map((type) => (
+                <article className="solution-card" key={type.name}>
+                  <span className="solution-number">{type.number}</span>
+                  <p className="solution-purpose">{type.purpose}</p>
+                  <h3>{type.name}</h3>
+                  <p>{type.description}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -239,9 +269,9 @@ export default function Home() {
         <section className="section packages-section" id="packages" aria-labelledby="packages-title">
           <div className="shell">
             <div className="section-heading centered-heading">
-              <p className="kicker">מחיר ברור. היקף ברור.</p>
-              <h2 id="packages-title">בוחרים את החבילה שמתאימה לעסק.</h2>
-              <p>מתחילים ממוקד, בלי תוספות שלא באמת צריך.</p>
+              <p className="kicker">פתרון שמתאים לעסק</p>
+              <h2 id="packages-title">בוחרים אתר לפי המטרות והיקף העבודה.</h2>
+              <p>החבילות הן נקודת התחלה; ההצעה הסופית מותאמת לצרכים של העסק.</p>
             </div>
 
             <div className="package-grid">
@@ -270,66 +300,28 @@ export default function Home() {
             </div>
             <p className="pricing-note">
               המחירים הם בסיס לתכנון ואינם כוללים דומיין, צילום, מיתוג, כתיבה מקצועית,
-              מערכות מסחר או אינטגרציות בתשלום. היקף סופי ומע״מ יוגדרו בהצעה מסודרת.
+              מערכות מסחר או אינטגרציות בתשלום. חנות אונליין מתוכננת ומתומחרת בנפרד
+              לפי הקטלוג, הסליקה, המשלוחים והתפעול. היקף סופי ומע״מ יוגדרו בהצעה מסודרת.
             </p>
-          </div>
-        </section>
-
-        <section className="section work-section" id="work" aria-labelledby="work-title">
-          <div className="shell">
-            <div className="section-heading split-heading">
-              <div>
-                <p className="kicker">כיוון, לא תבנית</p>
-                <h2 id="work-title">כל מקצוע מקבל במה משלו.</h2>
-              </div>
-              <p>
-                אלה פרויקטי קונספט שמדגימים כיוונים אפשריים. הם אינם לקוחות או
-                תוצאות מסחריות אמיתיות.
-              </p>
-            </div>
-
-            <div className="project-grid">
-              {projects.map((project, index) => (
-                <article className={`project-card ${project.className}`} key={project.name}>
-                  <div className="project-topline">
-                    <span>פרויקט קונספט</span>
-                    <span>0{index + 1}</span>
-                  </div>
-                  <div className="project-preview">
-                    <div className="project-browser">
-                      <span /><span /><span />
-                    </div>
-                    <div className="project-logo"><Icon name={project.icon} />{project.name}</div>
-                    <div className="project-title">שירות שאפשר<br />לסמוך עליו.</div>
-                    <span className="project-button">דברו איתנו</span>
-                    <div className="project-shape" />
-                  </div>
-                  <div className="project-copy">
-                    <div><span>{project.trade}</span><h3>{project.name}</h3></div>
-                    <p>{project.line}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
           </div>
         </section>
 
         <section className="section process-section" id="process" aria-labelledby="process-title">
           <div className="shell process-layout">
             <div className="process-intro">
-              <p className="kicker">פשוט לעבוד יחד</p>
-              <h2 id="process-title">מתקדמים שלב־שלב, בלי ערפל.</h2>
+              <p className="kicker">תהליך שמתחיל בעסק</p>
+              <h2 id="process-title">לומדים את העסק ובונים אתר שמתאים למטרות שלו.</h2>
               <p>
-                אתם מכירים את העסק. אנחנו הופכים את הידע הזה לאתר ברור,
-                מהיר ונוח לתחזוקה.
+                התהליך נועד להבין מה הלקוחות שלכם צריכים לראות ומה האתר צריך
+                להשיג, כדי שכל החלטה בעיצוב ובתוכן תשרת מטרה עסקית ברורה.
               </p>
-              <a className="text-link" href="#contact">מתחילים בשיחה <Icon name="arrow" /></a>
+              <a className="text-link" href="#contact">קובעים פגישת אפיון <Icon name="arrow" /></a>
             </div>
             <ol className="process-list">
-              <li><span>01</span><div><h3>מגדירים מטרה</h3><p>קהל, שירותים, אזור פעילות והפעולה החשובה ביותר.</p></div></li>
-              <li><span>02</span><div><h3>בונים כיוון</h3><p>מבנה, תוכן ועיצוב מוצגים בגרסת Preview פרטית.</p></div></li>
-              <li><span>03</span><div><h3>מדייקים ובודקים</h3><p>מובייל, נגישות, מהירות, טפסים ואבטחה עוברים בדיקה.</p></div></li>
-              <li><span>04</span><div><h3>עולים ומטפלים</h3><p>הגרסה המאושרת עולה לאוויר ונכנסת למסלול תחזוקה.</p></div></li>
+              <li><span>01</span><div><h3>פגישת אפיון ולמידה</h3><p>מכירים את העסק, הקהל, השירותים והמטרות ומזהים מה מונע היום יותר פניות או מכירות.</p></div></li>
+              <li><span>02</span><div><h3>מתאימים את האתר לעסק</h3><p>בוחרים דף נחיתה, אתר תדמית או פתרון מסחר ובונים מבנה, תוכן ועיצוב שתומכים במטרה.</p></div></li>
+              <li><span>03</span><div><h3>עוברים יחד ומדייקים</h3><p>מקבלים גרסת תצוגה, עוברים עליה יחד ומבצעים את השינויים שנדרשים כדי שהאתר ירגיש נכון לעסק.</p></div></li>
+              <li><span>04</span><div><h3>בודקים, משפרים ומשיקים</h3><p>בודקים מובייל, מהירות, נגישות, טפסים ואבטחה — ומעלים לאוויר אתר מקצועי ומוכן לעבודה.</p></div></li>
             </ol>
           </div>
         </section>
@@ -338,10 +330,10 @@ export default function Home() {
           <div className="shell care-card">
             <div className="care-copy">
               <p className="kicker kicker-light">אחרי ההשקה</p>
-              <h2 id="care-title">יש מי ששומר על האתר.</h2>
+              <h2 id="care-title">האתר נשאר מהיר, מעודכן וזמין.</h2>
               <p>
-                אחסון הוא רק חלק מהעניין. מסלול התחזוקה נועד לשמור על האתר
-                זמין, מעודכן ומוכן לשינויים קטנים בלי לפתוח פרויקט מחדש.
+                מסלול התחזוקה כולל יותר מאחסון. אנחנו עוקבים אחר הזמינות,
+                מטפלים בעדכוני אבטחה ותומכים בשינויי תוכן קטנים לאורך הדרך.
               </p>
             </div>
             <div className="care-features">
@@ -356,9 +348,9 @@ export default function Home() {
         <section className="section faq-section" aria-labelledby="faq-title">
           <div className="shell faq-layout">
             <div className="section-heading">
-              <p className="kicker">שאלות לפני שמתחילים</p>
-              <h2 id="faq-title">קצר ולעניין.</h2>
-              <p>כל מה שחשוב לדעת לפני שמוציאים אתר לדרך.</p>
+              <p className="kicker">מידע לפני שמתחילים</p>
+              <h2 id="faq-title">תשובות לשאלות חשובות.</h2>
+              <p>סוג האתר, לוחות הזמנים, התחזוקה והבעלות — בצורה ברורה מראש.</p>
             </div>
             <div className="faq-list">
               {faqs.map((faq, index) => (
@@ -375,12 +367,12 @@ export default function Home() {
           <div className="contact-grid" aria-hidden="true" />
           <div className="shell contact-layout">
             <div>
-              <p className="kicker kicker-light">הצעד הבא פשוט</p>
-              <h2 id="contact-title">בואו נבנה לעסק נוכחות שעובדת.</h2>
+              <p className="kicker kicker-light">מתחילים בהיכרות</p>
+              <h2 id="contact-title">בואו נבין איזה אתר יקדם את העסק שלכם.</h2>
             </div>
             <div className="contact-card">
               <span className="demo-badge">פרטי הדגמה — יחוברו לפני ההשקה</span>
-              <p>ספרו לנו מה אתם עושים, איפה אתם עובדים ומה האתר צריך להשיג.</p>
+              <p>ספרו לנו על העסק, הלקוחות והמטרות. נחזור אליכם כדי להבין את הצורך ולהציע את הפתרון המתאים.</p>
               <div className="contact-links">
                 <span aria-label="מספר טלפון להדגמה"><Icon name="phone" />050-000-0000</span>
                 <span aria-label="כתובת אימייל להדגמה"><Icon name="spark" />hello@mamandigital.example</span>
@@ -396,7 +388,7 @@ export default function Home() {
       <footer>
         <div className="shell footer-main">
           <a className="brand brand-footer" href="#top"><span>Maman</span>Digital</a>
-          <p>אתרים שעובדים בשביל בעלי מקצוע.</p>
+          <p>אתרים שמחזקים נוכחות ומקדמים תוצאות עסקיות.</p>
           <a href="#top">חזרה למעלה ↑</a>
         </div>
         <div className="shell footer-bottom">
