@@ -6,11 +6,48 @@ This repository is for the agency's own marketing website. It will present the
 service, showcase honest portfolio work, explain the process and care plans,
 and convert visitors into qualified enquiries.
 
-The project now contains a standard Next.js foundation for Vercel. Branding,
-production copy, portfolio projects,
-contact details, analytics, and a production domain have not been selected. Do
-not publish the starter or invent testimonials, clients, results, prices,
-certifications, or contact information.
+The selected working agency name is **MamanDigital**. The project contains a
+complete first-pass Hebrew RTL marketing site on a feature branch. It includes
+the service positioning, packages, process, clearly labelled concept portfolio
+work, maintenance/security information, FAQ, and a contact section. Real
+contact details, analytics, final brand assets, legal text, and a production
+domain have not been selected. Do not invent testimonials, clients, results,
+certifications, or unlabelled contact information.
+
+## Confirmed project state
+
+- GitHub organization: `mamanholdings`.
+- Repository: `mamanholdings/agency-site`.
+- Default branch: `main`.
+- Working agency name: `MamanDigital`.
+- Primary language: Hebrew with a deliberate RTL layout.
+- Initial target market: Israeli local service professionals, especially
+  technicians, electricians, plumbers, and similar tradespeople.
+- Service area: all of Israel.
+- Primary call to action: `קבלו הצעת מחיר ב-WhatsApp`.
+- Commercial direction: three website packages. The middle package is planned
+  at NIS 2,500 setup plus NIS 200 per month for hosting and maintenance; its
+  exact scope and contract terms still require confirmation.
+- Current design direction: Hebrew-first industrial editorial design using
+  graphite, warm off-white, safety orange, lime accents, technical grids, and
+  custom CSS concept-project artwork. Keep motion restrained.
+- Repository visibility: public. This was selected because Vercel Hobby does
+  not support native Git integration for private organization repositories.
+- Vercel team: `maman-holdings-llc`.
+- Vercel project: `agency-site`.
+- Production alias: `https://agency-site-eta-sooty.vercel.app`.
+- GitHub and Vercel are connected. Future branches and pull requests should
+  receive Preview deployments; merges to `main` should deploy to Production.
+- Vercel Authentication currently protects the `*.vercel.app` deployment URLs.
+  The owner can view them while signed in. Do not disable this protection
+  without explicit approval because doing so also exposes Preview URLs.
+- No custom production domain is configured yet.
+
+The first Production build is ready and verified through authenticated Vercel
+access. The local `.vercel/` link and `.env.local` are intentionally ignored and
+must never be committed. The former Sites/Vinext starter is preserved only in
+the ignored local path `work/legacy-sites-starter/`; it is not part of the
+production repository.
 
 ## Technology
 
@@ -54,6 +91,23 @@ credentials, customer data, private analytics, deployment credentials, local
 caches, or build output. Store secrets in the hosting provider and keep local
 `.env` keys documented in a safe `.env.example` when required.
 
+## Codex, GitHub, and Vercel workflow
+
+1. Codex works locally in this repository on a short-lived `codex/*` branch.
+2. Codex runs `npm run check` and performs browser checks appropriate to the
+   change before publishing it.
+3. The branch is pushed to GitHub, which remains the source of truth.
+4. Vercel creates a Preview deployment for the branch or pull request.
+5. Review the code and Preview deployment; do not treat AI output as approved
+   merely because it builds.
+6. Merge the reviewed pull request into `main`.
+7. Vercel deploys that exact `main` revision to Production.
+8. Verify the production URL, important links, forms, console errors, and
+   responsive behavior after deployment.
+
+Do not routinely deploy uncommitted local files with the Vercel CLI. Direct CLI
+deployment was used only to bootstrap and verify the first linked project.
+
 ## Design and content rules
 
 - Build a focused conversion site before adding extra pages or features.
@@ -79,6 +133,12 @@ caches, or build output. Store secrets in the hosting provider and keep local
 - Never describe a site as unhackable or guarantee rankings, compliance, or
   security outcomes.
 
+The current application is static, has no forms, database, authentication, or
+customer data, and therefore has a deliberately small attack surface. It uses
+HTTPS on Vercel and sets baseline security headers in `next.config.ts`. Revisit
+the threat model whenever forms, accounts, payments, uploads, inventory, or
+other server-side features are introduced.
+
 ## Deployment
 
 GitHub is the source of truth. Connect each repository to one Vercel project.
@@ -97,8 +157,33 @@ Domains should normally be owned by the client or agency business account with
 MFA, renewal protection, documented DNS, and recovery access. Do not reuse one
 customer's credentials or environment values for another customer.
 
+For this agency site, keep Vercel Authentication enabled while only the
+`*.vercel.app` address is used. When a real custom domain is selected, attach it
+to the Production deployment, confirm that it is publicly reachable, and keep
+Preview deployments protected. Record the registrar, DNS ownership, renewal,
+MFA, and recovery details outside the public repository.
+
+## Decisions made
+
+- Use standard Next.js App Router, React, and TypeScript instead of the temporary
+  Sites/Vinext starter.
+- Host on Vercel and use its native GitHub integration.
+- Keep the marketing site mostly static until a justified requirement needs a
+  backend.
+- Use one repository and one Vercel project per customer site.
+- Keep this repository public to retain Vercel Hobby Git integration; never
+  rely on repository privacy to protect secrets.
+- Keep Vercel deployment authentication enabled for now and use signed-in or
+  temporary authenticated access to review deployments.
+- Treat inventory, authentication, payments, and similar systems as separate
+  application work requiring stronger architecture and security review.
+
 ## Before building the first version
 
-Confirm the business name, target market, language/RTL requirements, primary
-call to action, contact details, package/pricing approach, and whether the first
-portfolio entries are concept projects.
+Confirm real contact details, complete contract terms, and final approval of
+the package scopes. The current portfolio entries are explicitly labelled
+concept projects and must remain labelled until replaced by real work.
+
+Also confirm the production domain, brand assets, preferred visual direction,
+legal/privacy requirements, form destination, analytics choice, and ongoing
+maintenance offering before launching the finished public site.

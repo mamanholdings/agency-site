@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Heebo } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const heebo = Heebo({
+  variable: "--font-heebo",
+  subsets: ["hebrew", "latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -13,8 +14,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Agency Site — Coming Soon",
-  description: "The agency website is currently being prepared.",
+  title: {
+    default: "MamanDigital | אתרים שעובדים בשביל בעלי מקצוע",
+    template: "%s | MamanDigital",
+  },
+  description:
+    "MamanDigital בונה אתרי תדמית מהירים, מדויקים ומותאמים לנייד עבור טכנאים, חשמלאים, אינסטלטורים ובעלי מקצוע בכל הארץ.",
+  keywords: [
+    "בניית אתרים לבעלי מקצוע",
+    "אתר לחשמלאי",
+    "אתר לאינסטלטור",
+    "אתר לטכנאי",
+    "בניית אתר לעסק קטן",
+  ],
+  robots: {
+    index: false,
+    follow: false,
+  },
+  openGraph: {
+    locale: "he_IL",
+    type: "website",
+    title: "MamanDigital | אתרים שעובדים בשביל בעלי מקצוע",
+    description:
+      "אתרי תדמית חדים, מהירים ומותאמים לבעלי מקצוע שרוצים להפוך חיפושים לפניות.",
+  },
 };
 
 export default function RootLayout({
@@ -23,8 +46,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html dir="rtl" lang="he">
+      <body className={`${heebo.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>
