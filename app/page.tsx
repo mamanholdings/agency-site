@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { Icon } from "./_components/icon";
 
 const packages = [
@@ -120,6 +122,7 @@ export default function Home() {
           <nav aria-label="ניווט ראשי">
             <a href="#why">למה צריך אתר</a>
             <a href="#solutions">סוגי אתרים</a>
+            <a href="#portfolio">תיק עבודות</a>
             <a href="#packages">חבילות</a>
             <a href="#process">תהליך</a>
           </nav>
@@ -152,8 +155,8 @@ export default function Home() {
                   קבלו הצעת מחיר ב-WhatsApp
                   <Icon name="arrow" />
                 </a>
-                <a className="text-link" href="#packages">
-                  צפייה בחבילות <span aria-hidden="true">↓</span>
+                <a className="text-link" href="#portfolio">
+                  צפייה בתיק עבודות <span aria-hidden="true">↓</span>
                 </a>
               </div>
               <ul className="hero-notes" aria-label="יתרונות מרכזיים">
@@ -260,6 +263,50 @@ export default function Home() {
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="section portfolio-section" id="portfolio" aria-labelledby="portfolio-title">
+          <div className="shell">
+            <div className="section-heading split-heading portfolio-heading">
+              <div>
+                <p className="kicker">תיק עבודות</p>
+                <h2 id="portfolio-title">כך נראה אתר שמותאם לעסק ולקהל שלו.</h2>
+              </div>
+              <p>
+                כאן תוכלו להתרשם מהחשיבה, העיצוב וההתאמה של כל אתר לעסק שהוא
+                נועד לשרת. נתחיל בפרויקט קונספט לענף השירותים.
+              </p>
+            </div>
+
+            <article className="portfolio-card">
+              <div className="portfolio-image">
+                <Image
+                  alt="חשמלאי מקצועי בודק לוח חשמל בדירה מודרנית"
+                  fill
+                  sizes="(max-width: 820px) 100vw, 56vw"
+                  src="/images/alon-electric-hero.png"
+                />
+                <span className="portfolio-demo-label">אתר לדוגמה · לא לקוח אמיתי</span>
+              </div>
+              <div className="portfolio-copy">
+                <span className="portfolio-index">פרויקט 01</span>
+                <p className="portfolio-type">עמוד נחיתה לעסק שירות</p>
+                <h3>אלון חשמל</h3>
+                <p>
+                  אתר חד־עמודי שמציג שירותי חשמל בצורה ברורה, מחזק את תחושת
+                  המקצועיות ומוביל את המבקר ליצירת קשר בלי להעמיס עליו מידע.
+                </p>
+                <ul aria-label="מאפייני הפרויקט">
+                  <li><Icon name="check" /> מבנה ממוקד לפניות</li>
+                  <li><Icon name="check" /> התאמה מלאה למובייל</li>
+                  <li><Icon name="check" /> שפה חזותית ייחודית לעסק</li>
+                </ul>
+                <Link className="button portfolio-button" href="/portfolio/alon-electric">
+                  לצפייה באתר לדוגמה <Icon name="arrow" />
+                </Link>
+              </div>
+            </article>
           </div>
         </section>
 

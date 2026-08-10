@@ -8,8 +8,10 @@ and convert visitors into qualified enquiries.
 
 The selected working agency name is **MamanDigital**. The project contains a
 complete first-pass Hebrew RTL marketing site. It includes broad business
-positioning, website types, packages, process, maintenance/security information,
-FAQ, and a contact section. Real
+positioning, website types, a portfolio section, packages, process,
+maintenance/security information, FAQ, and a contact section. The first
+portfolio entry is an explicitly labelled concept landing page for the fictional
+business **Alon Electric**, available at `/portfolio/alon-electric`. Real
 contact details, analytics, final brand assets, legal text, and a production
 domain have not been selected. Do not invent testimonials, clients, results,
 certifications, or unlabelled contact information.
@@ -25,6 +27,10 @@ certifications, or unlabelled contact information.
   enough for visitors from different industries to identify with it.
 - Service area: all of Israel.
 - Primary call to action: `קבלו הצעת מחיר ב-WhatsApp`.
+- Portfolio: the home page links to an in-repository concept project for the
+  fictional business `אלון חשמל`. It is a one-page Hebrew RTL service website,
+  uses dummy contact details, and is clearly labelled as a demo rather than a
+  real client project.
 - Commercial direction: three website packages. The middle package is planned
   at NIS 2,500 setup plus NIS 200 per month for hosting and maintenance; its
   exact scope and contract terms still require confirmation.
@@ -183,8 +189,8 @@ renewal, MFA, and recovery details outside the public repository.
 ## Before building the first version
 
 Confirm real contact details, complete contract terms, and final approval of
-the package scopes. The portfolio section is intentionally absent until real or
-approved concept sites are ready to present honestly.
+the package scopes. The portfolio currently contains one approved concept site;
+keep every future concept clearly labelled and never present it as client work.
 
 Also confirm the production domain, brand assets, preferred visual direction,
 legal/privacy requirements, form destination, analytics choice, and ongoing
