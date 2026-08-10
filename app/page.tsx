@@ -2,52 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "./_components/icon";
 
-const packages = [
-  {
-    name: "דף נחיתה",
-    eyebrow: "להצעה ממוקדת",
-    setup: "1,500",
-    monthly: "150",
-    description: "עמוד ממוקד לשירות, קמפיין או הצעה אחת, עם מסלול ברור לפנייה.",
-    features: [
-      "עמוד אחד, עד 5 מקטעים",
-      "עיצוב מלא למובייל",
-      "כפתורי טלפון ו-WhatsApp",
-      "התאמה טכנית בסיסית למנועי חיפוש",
-      "סבב תיקונים אחד",
-    ],
-  },
-  {
-    name: "אתר תדמית",
-    eyebrow: "הבחירה לעסקים",
-    setup: "2,500",
-    monthly: "200",
-    description: "אתר מלא שמציג את העסק, השירותים והיתרונות ובונה אמון מול לקוחות.",
-    featured: true,
-    features: [
-      "עד 5 עמודים",
-      "עיצוב מותאם אישית לעברית ולמובייל",
-      "טופס פנייה עם הגנת ספאם",
-      "חיבור למדידה וניתוח תנועה",
-      "התאמה טכנית למנועי חיפוש ומבנה תוכן",
-      "2 סבבי תיקונים",
-    ],
-  },
-  {
-    name: "אתר תדמית מורחב",
-    eyebrow: "לעסק עם היקף תוכן רחב",
-    setup: "4,500",
-    monthly: "350",
-    description: "פתרון רחב לעסק עם כמה שירותים, קהלים או תהליכי פנייה.",
-    features: [
-      "עד 8 עמודים",
-      "עמודי שירות או אזורי פעילות",
-      "חיבור ליומן או למערכת ניהול לקוחות",
-      "דוח מדידה חודשי",
-      "עדיפות בטיפול השוטף",
-      "3 סבבי תיקונים",
-    ],
-  },
+const planFeatures = [
+  "אתר תדמית מקצועי בהיקף של עד 5 עמודים",
+  "עיצוב המותאם לעסק, לעברית ולמובייל",
+  "כפתורי טלפון ו-WhatsApp וטופס פנייה מוגן מספאם",
+  "מבנה תוכן והתאמה טכנית בסיסית למנועי חיפוש",
+  "אחסון, תעודת SSL, תחזוקה ועדכוני אבטחה",
+  "בדיקות תקינות, טיפול בתקלות ושינויי תוכן קטנים",
 ];
 
 const siteTypes = [
@@ -68,7 +29,7 @@ const siteTypes = [
   {
     number: "03",
     name: "חנות אונליין",
-    purpose: "למכירת מוצרים באינטרנט",
+    purpose: "למכירת מוצרים · בתמחור נפרד",
     description:
       "מערכת מסחר עם קטלוג, סליקה, משלוחים וניהול הזמנות. ההיקף נקבע בנפרד לפי הפעילות של העסק.",
   },
@@ -88,7 +49,22 @@ const faqs = [
   {
     question: "מה כולל התשלום החודשי?",
     answer:
-      "אחסון האתר, תעודת SSL, בדיקות מהירות ותקינות האתר, טיפול בתקלות, שדרוגי מערכת, עדכוני אבטחה, תמיכה והיקף מוגדר של שינויי תוכן קטנים. הפירוט המדויק יופיע בהצעה ובהסכם.",
+      "התשלום החודשי כולל את בניית אתר התדמית במסגרת המסלול, אחסון, תעודת SSL, בדיקות מהירות ותקינות, טיפול בתקלות, עדכוני אבטחה והיקף מוגדר של שינויי תוכן קטנים. ההיקף המלא יופיע בהצעה ובהסכם.",
+  },
+  {
+    question: "מה המשמעות של אתר ללא עלות הקמה?",
+    answer:
+      "במקום לשלם סכום גדול בתחילת הדרך, עלות בניית האתר נכללת במסלול החודשי. התשלום הוא 250 ₪ לחודש בהתחייבות ל-12 חודשים, כלומר התחייבות כוללת של 3,000 ₪ בשנה הראשונה. אין תשלום הקמה נוסף לאתר תדמית העומד בהיקף המסלול.",
+  },
+  {
+    question: "מה קורה אם רוצים להפסיק במהלך השנה הראשונה?",
+    answer:
+      "אפשר להפסיק את השירות גם במהלך השנה הראשונה, אך יש להסדיר את יתרת התשלומים עד לסיום תקופת ההתחייבות. לדוגמה, אם נותרו ארבעה חודשים, יתרת התשלום תהיה עבור ארבעת החודשים שנותרו.",
+  },
+  {
+    question: "ומה קורה אחרי 12 חודשים?",
+    answer:
+      "לאחר השלמת השנה הראשונה המסלול ממשיך ללא התחייבות נוספת. אפשר להמשיך ליהנות מהאחסון והתחזוקה ב-250 ₪ לחודש, או להפסיק את השירות בכל עת בהתאם לתנאי ההסכם.",
   },
   {
     question: "האם האתר יופיע ראשון בגוגל?",
@@ -103,7 +79,7 @@ const faqs = [
   {
     question: "למי שייכים האתר והדומיין?",
     answer:
-      "הדומיין צריך להיות בבעלות העסק. הבעלות על הקוד, התוכן ושירותי הצד השלישי תוגדר מראש ובכתב, ללא הפתעות.",
+      "הדומיין והתוכן של העסק נשארים בבעלות העסק. תנאי מסירת קובצי האתר והעברתו לאחר סיום ההתקשרות יוגדרו מראש ובכתב, לאחר שכל התשלומים הנדרשים הוסדרו.",
   },
 ];
 
@@ -123,7 +99,7 @@ export default function Home() {
             <a href="#why">למה צריך אתר</a>
             <a href="#solutions">סוגי אתרים</a>
             <a href="#portfolio">תיק עבודות</a>
-            <a href="#packages">חבילות</a>
+            <a href="#packages">המסלול</a>
             <a href="#process">תהליך</a>
           </nav>
           <a className="button button-small" href="#contact">
@@ -139,20 +115,20 @@ export default function Home() {
           <div className="shell hero-layout">
             <div className="hero-copy">
               <p className="kicker">
-                <span /> אתרים שמקדמים עסקים
+                <span /> אתר מקצועי בלי הוצאה גדולה מראש
               </p>
               <h1 id="hero-title">
-                העסק שלכם ראוי לאתר
+                אתר תדמית לעסק
                 <br />
-                <em>שמביא תוצאות.</em>
+                <em>ב־250 ₪ לחודש.</em>
               </h1>
               <p className="hero-summary">
-                אנחנו מתמחים בבניית אתרים מותאמים לעסקים שרוצים להיראות
-                מקצועיים, להגיע ללקוחות הנכונים ולעודד פניות ומכירות.
+                אנחנו בונים את האתר ללא דמי הקמה במסגרת מסלול אחסון ותחזוקה
+                בהתחייבות לשנה. כך העסק מקבל נוכחות מקצועית בלי להוציא אלפי שקלים ביום הראשון.
               </p>
               <div className="hero-actions">
                 <a className="button" href="#contact">
-                  קבלו הצעת מחיר ב-WhatsApp
+                  בדקו התאמה למסלול ב-WhatsApp
                   <Icon name="arrow" />
                 </a>
                 <a className="text-link" href="#portfolio">
@@ -160,9 +136,9 @@ export default function Home() {
                 </a>
               </div>
               <ul className="hero-notes" aria-label="יתרונות מרכזיים">
-                <li><Icon name="check" /> מתאים למגוון עסקים</li>
-                <li><Icon name="check" /> מותאם למובייל</li>
-                <li><Icon name="check" /> מהיר ומאובטח</li>
+                <li><Icon name="check" /> ללא דמי הקמה</li>
+                <li><Icon name="check" /> 250 ₪ לחודש</li>
+                <li><Icon name="check" /> התחייבות ל־12 חודשים</li>
               </ul>
             </div>
 
@@ -175,7 +151,7 @@ export default function Home() {
                 <div className="phone-bar"><span /><span /><span /></div>
                 <div className="phone-content">
                   <div className="mini-brand"><Icon name="spark" /> העסק שלכם</div>
-                  <p>נוכחות מקצועית.<br />תוצאות עסקיות.</p>
+                  <p>אתר מקצועי.<br />בלי הוצאה גדולה מראש.</p>
                   <span className="mini-button">בואו נדבר</span>
                   <div className="mini-lines"><span /><span /><span /></div>
                   <div className="mini-services">
@@ -198,10 +174,10 @@ export default function Home() {
 
         <section className="ticker" aria-label="סוגי אתרים ומטרות עסקיות">
           <div>
-            <span>דפי נחיתה</span><i />
-            <span>אתרי תדמית</span><i />
-            <span>חנויות אונליין</span><i />
-            <span>נוכחות דיגיטלית</span>
+            <span>ללא דמי הקמה</span><i />
+            <span>250 ₪ לחודש</span><i />
+            <span>אחסון ותחזוקה כלולים</span><i />
+            <span>שנה ראשונה בהתחייבות</span>
           </div>
         </section>
 
@@ -209,12 +185,13 @@ export default function Home() {
           <div className="shell">
             <div className="section-heading split-heading">
               <div>
-                <p className="kicker kicker-light">נוכחות דיגיטלית היא חלק מהעסק</p>
-                <h2 id="why-title">האתר משפיע על ההחלטה לפנות אליכם.</h2>
+                <p className="kicker kicker-light">נוכחות דיגיטלית בלי לדחות למחר</p>
+                <h2 id="why-title">לקוחות בודקים את העסק. עכשיו המחיר לא צריך לעצור אתכם.</h2>
               </div>
               <p>
                 לקוחות בודקים את העסק באינטרנט לפני שהם מתקשרים או קונים.
-                כשאין אתר מקצועי, קשה יותר לבנות אמון — והזדמנויות עוברות למתחרים.
+                כשעלות ההקמה מרגישה גבוהה, קל לוותר על האתר — ולכן בנינו מסלול שמחליף
+                הוצאה גדולה מראש בתשלום חודשי קבוע וברור.
               </p>
             </div>
 
@@ -313,37 +290,61 @@ export default function Home() {
         <section className="section packages-section" id="packages" aria-labelledby="packages-title">
           <div className="shell">
             <div className="section-heading centered-heading">
-              <h2 id="packages-title">בוחרים אתר לפי המטרות והיקף העבודה.</h2>
+              <p className="kicker">מסלול פשוט ושקוף</p>
+              <h2 id="packages-title">מתחילים בלי עלות הקמה גדולה.</h2>
+              <p>
+                אתר תדמית מקצועי, אחסון ותחזוקה במסלול חודשי אחד — עם היקף ברור ותנאים ידועים מראש.
+              </p>
             </div>
 
-            <div className="package-grid">
-              {packages.map((item) => (
-                <article className={`package-card${item.featured ? " package-featured" : ""}`} key={item.name}>
-                  {item.featured ? <span className="popular-badge">הכי מתאים לרוב העסקים</span> : null}
-                  <p className="package-eyebrow">{item.eyebrow}</p>
-                  <h3>{item.name}</h3>
-                  <p className="package-description">{item.description}</p>
-                  <div className="price-row">
-                    <span className="currency">₪</span>
-                    <strong>{item.setup}</strong>
-                    <span>הקמה</span>
-                  </div>
-                  <p className="monthly">+ ₪{item.monthly} לחודש אחסון ותחזוקה</p>
-                  <ul>
-                    {item.features.map((feature) => (
-                      <li key={feature}><Icon name="check" />{feature}</li>
-                    ))}
-                  </ul>
-                  <a className={item.featured ? "button" : "button button-outline"} href="#contact">
-                    לקבלת הצעה <Icon name="arrow" />
-                  </a>
-                </article>
-              ))}
-            </div>
+            <article className="subscription-card">
+              <div className="subscription-offer">
+                <span className="popular-badge">לאתרי תדמית בהיקף מוגדר</span>
+                <p className="package-eyebrow">האתר עלינו במסגרת המסלול</p>
+                <h3>אתר תדמית + אחסון ותחזוקה</h3>
+                <div className="subscription-price">
+                  <span className="currency">₪</span>
+                  <strong>250</strong>
+                  <span>לחודש</span>
+                </div>
+                <p className="subscription-setup"><b>0 ₪ דמי הקמה</b> · התחייבות ל־12 חודשים</p>
+                <p className="subscription-total">סך ההתחייבות בשנה הראשונה: 3,000 ₪</p>
+                <a className="button" href="#contact">
+                  בדקו אם המסלול מתאים לעסק <Icon name="arrow" />
+                </a>
+              </div>
+
+              <div className="subscription-scope">
+                <h3>מה כלול במסלול?</h3>
+                <ul>
+                  {planFeatures.map((feature) => (
+                    <li key={feature}><Icon name="check" />{feature}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="subscription-terms" aria-label="תנאי המסלול המרכזיים">
+                <div>
+                  <span>01</span>
+                  <h3>השנה הראשונה</h3>
+                  <p>התחייבות ל־12 תשלומים חודשיים. במקרה של יציאה מוקדמת משלמים את יתרת התקופה.</p>
+                </div>
+                <div>
+                  <span>02</span>
+                  <h3>אחרי השנה הראשונה</h3>
+                  <p>ממשיכים ב־250 ₪ לחודש ללא התחייבות נוספת, וניתן להפסיק בכל עת.</p>
+                </div>
+                <div>
+                  <span>03</span>
+                  <h3>מה מתומחר בנפרד?</h3>
+                  <p>דומיין, צילום, מיתוג, כתיבה מקצועית, שירותים חיצוניים ואתרים או מערכות מורכבים.</p>
+                </div>
+              </div>
+            </article>
             <p className="pricing-note">
-              המחירים המוצגים הם נקודת פתיחה לתמחור ואינם כוללים דומיין, צילום, מיתוג, כתיבה מקצועית,
-              מערכות מסחר או חיבורים לשירותים חיצוניים בתשלום. חנות אונליין מתוכננת ומתומחרת בנפרד
-              לפי הקטלוג, הסליקה, המשלוחים והתפעול. המחיר הסופי, היקף העבודה ומע״מ יוגדרו בהצעה מסודרת.
+              המסלול מיועד לאתרי תדמית בהיקף המוגדר ואינו מתאים לחנויות אונליין, אזורים אישיים,
+              מערכות הזמנות, מלאי או פיתוחים מורכבים. היקף האתר, תנאי ההעברה, מע״מ וכל עלות חיצונית
+              יוגדרו במפורש בהצעה ובהסכם לפני תחילת העבודה.
             </p>
           </div>
         </section>
@@ -370,7 +371,7 @@ export default function Home() {
         <section className="section care-section" aria-labelledby="care-title">
           <div className="shell care-card">
             <div className="care-copy">
-              <p className="kicker kicker-light">אחרי ההשקה</p>
+              <p className="kicker kicker-light">כלול בתשלום החודשי</p>
               <h2 id="care-title">שומרים על האתר מהיר, מעודכן ומתפקד.</h2>
               <p>
                 מסלול התחזוקה כולל יותר מאחסון. אנחנו עוקבים אחר תקינות האתר,
@@ -407,12 +408,12 @@ export default function Home() {
           <div className="contact-grid" aria-hidden="true" />
           <div className="shell contact-layout">
             <div>
-              <p className="kicker kicker-light">מתחילים בהיכרות</p>
-              <h2 id="contact-title">בואו נבין איזה אתר יקדם את העסק שלכם.</h2>
+              <p className="kicker kicker-light">מתחילים בלי הוצאה גדולה מראש</p>
+              <h2 id="contact-title">בואו נבדוק אם העסק מתאים למסלול.</h2>
             </div>
             <div className="contact-card">
               <span className="demo-badge">פרטים לדוגמה — יוחלפו לפני ההשקה</span>
-              <p>ספרו לנו על העסק, הלקוחות והמטרות. נחזור אליכם כדי להבין את הצורך ולהציע את הפתרון המתאים.</p>
+              <p>ספרו לנו על העסק, השירותים והמטרות. נבדוק אם אתר תדמית במסגרת המסלול מתאים לצורך שלכם ונציג את ההיקף והתנאים בצורה ברורה.</p>
               <div className="contact-links">
                 <span aria-label="מספר טלפון להדגמה"><Icon name="phone" />050-000-0000</span>
                 <span aria-label="כתובת אימייל להדגמה"><Icon name="spark" />hello@mamandigital.example</span>
