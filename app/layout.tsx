@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "MamanDigital | אתרים שמקדמים עסקים",
+    default: "MamanDigital | אתר תדמית ב־250 ₪ לחודש",
     template: "%s | MamanDigital",
   },
   description:
-    "MamanDigital מתמחים בבניית דפי נחיתה, אתרי תדמית וחנויות אונליין שמותאמים למטרות של עסקים בישראל.",
+    "אתר תדמית מקצועי לעסק ללא דמי הקמה, במסלול של 250 ₪ לחודש הכולל אחסון ותחזוקה ובהתחייבות לשנה הראשונה.",
   keywords: [
     "בניית אתרים לעסקים",
     "בניית אתר לעסק קטן",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   openGraph: {
     locale: "he_IL",
     type: "website",
-    title: "MamanDigital | אתרים שמקדמים עסקים",
+    title: "MamanDigital | אתר תדמית ב־250 ₪ לחודש",
     description:
-      "דפי נחיתה, אתרי תדמית וחנויות אונליין שמותאמים ללידים, מכירות ונוכחות מקצועית.",
+      "אתר תדמית מקצועי ללא דמי הקמה, עם אחסון ותחזוקה במסלול חודשי ברור.",
   },
 };
 

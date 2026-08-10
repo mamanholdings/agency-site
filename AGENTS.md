@@ -3,12 +3,12 @@
 ## Purpose and current status
 
 This repository is for the agency's own marketing website. It will present the
-service, explain the available website types, packages, process and care plans,
+service, explain the available website types, subscription model, process and care plan,
 and convert visitors into qualified enquiries.
 
 The selected working agency name is **MamanDigital**. The project contains a
 complete first-pass Hebrew RTL marketing site. It includes broad business
-positioning, website types, a portfolio section, packages, process,
+positioning, website types, a portfolio section, subscription offer, process,
 maintenance/security information, FAQ, and a contact section. The first
 portfolio entry is an explicitly labelled concept landing page for the fictional
 business **Alon Electric**, available at `/portfolio/alon-electric`. Real
@@ -31,9 +31,18 @@ certifications, or unlabelled contact information.
   fictional business `אלון חשמל`. It is a one-page Hebrew RTL service website,
   uses dummy contact details, and is clearly labelled as a demo rather than a
   real client project.
-- Commercial direction: three website packages. The middle package is planned
-  at NIS 2,500 setup plus NIS 200 per month for hosting and maintenance; its
-  exact scope and contract terms still require confirmation.
+- Commercial direction: a subscription-first offer for standard marketing
+  websites. The client pays NIS 250 per month for a combined website, hosting,
+  and maintenance plan, with no separate setup fee and a 12-month minimum
+  commitment (NIS 3,000 total in the first year). Early cancellation requires
+  payment of the remaining first-year balance. After the first year, the plan
+  continues month-to-month and may be cancelled at any time under the written
+  agreement. The offer is limited to clearly scoped marketing sites; domains,
+  paid third-party services, professional photography/copy/branding,
+  e-commerce, inventory, accounts, booking systems, and complex integrations
+  are excluded or priced separately. Ownership, handoff, tax, revision limits,
+  support response times, and cancellation mechanics must be stated in the
+  signed proposal and agreement.
 - Website types are explicitly distinguished: landing pages for a focused
   offer, marketing/business sites for credibility and leads, and e-commerce
   sites for online sales. E-commerce is scoped and priced separately.
@@ -183,13 +192,16 @@ renewal, MFA, and recovery details outside the public repository.
 - Keep this repository public to retain Vercel Hobby Git integration; never
   rely on repository privacy to protect secrets.
 - Keep Production public and protect Preview deployments where practical.
+- Use the NIS 250 monthly subscription as the primary commercial offer for
+  clearly scoped marketing sites, with no separate setup fee, a 12-month first
+  term, and transparent disclosure of the NIS 3,000 minimum first-year cost.
 - Treat inventory, authentication, payments, and similar systems as separate
   application work requiring stronger architecture and security review.
 
 ## Before building the first version
 
-Confirm real contact details, complete contract terms, and final approval of
-the package scopes. The portfolio currently contains one approved concept site;
+Confirm real contact details, complete subscription contract terms, and final
+approval of the included scope and handoff policy. The portfolio currently contains one approved concept site;
 keep every future concept clearly labelled and never present it as client work.
 
 Also confirm the production domain, brand assets, preferred visual direction,
